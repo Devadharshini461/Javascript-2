@@ -1,0 +1,22 @@
+.div1{
+    margin-top:190px;
+    margin-left:550px;
+    border:solid;
+    width: fit-content;
+    height:fit-content;
+    padding:25px;
+}
+
+button{
+    margin-left:40px;
+    margin-top:18px;
+    padding:4px;
+}
+  /* .container {
+      background-color: #fff;
+      width: 350px;
+      margin: auto;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    } */
