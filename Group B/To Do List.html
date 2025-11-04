@@ -1,16 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="TO Do List.css">
-    <script src="To Do List.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>document</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="div1">
-        <h3>To Do List</h3>
-        
+  <div class="main-box">
+    <h1>My To-Do List</h1>
+
+    <div class="add-area">
+      <div class="input-group">
+        <label for="taskInput">Task Name:</label>
+        <input type="text" id="taskInput" placeholder="Enter your task">
+      </div>
+      <div class="input-group">
+        <label for="taskDate">Due Date:</label>
+        <input type="date" id="taskDate">
+      </div>
+
+      <button onclick="addTask()">Add</button>
     </div>
+
+    <ul id="taskList"></ul>
+
+    <h3>Completed Tasks</h3>
+    <ul id="doneList"></ul>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
+

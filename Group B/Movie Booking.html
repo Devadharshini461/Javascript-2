@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Movie Booking</title>
+  <link rel="stylesheet" href="MovieBooking.css" />
+</head>
+<body onload="populateUI()">
+  <div class="container">
+    <h1>🎟️ Movie Booking</h1>
+
+    <div class="movie-container">
+      <label>Select a movie:</label>
+      <select id="movie" onchange="changeMovie()">
+        <option value="200">Avengers: Endgame (₹200)</option>
+        <option value="250">Jawan (₹250)</option>
+        <option value="180">Spider-Man (₹180)</option>
+        <option value="300">Leo (₹300)</option>
+      </select>
+    </div>
+
+    <div class="showtime-container">
+      <label>Select show time:</label>
+      <select id="showtime">
+        <option value="10:00 AM">10:00 AM</option>
+        <option value="1:00 PM">1:00 PM</option>
+        <option value="4:00 PM">4:00 PM</option>
+        <option value="7:00 PM">7:00 PM</option>
+      </select>
+    </div>
+
+    <ul class="showcase">
+      <li><div class="seat"></div><small>Available</small></li>
+      <li><div class="seat selected"></div><small>Selected</small></li>
+      <li><div class="seat occupied"></div><small>Booked</small></li>
+    </ul>
+
+    <div class="seat-container" id="seat-container">
+      <!-- Seat Layout (4 rows × 8 seats) -->
+      <div class="row">
+        <div class="seat" onclick="selectSeat(this)"></div>
+        <div class="seat" onclick="selectSeat(this)"></div>
+        <div class="seat" onclick="selectSeat(this)"></div>
+        <div class="seat" onclick="selectSeat(this)"></div>
+        <div class="seat" onclick="selectSeat(this)"></div>
+        <div class="seat" onclick="selectSeat(this)"></div>
+        <div class="seat" onclick="selectSeat(this)"></div>
+        <div class="seat" onclick="selectSeat(this)"></div>
+      </div>
+      <div class="row">
+        <div class="seat" onclick="selectSeat(this)"></div>
+        <div class="seat" onclick="selectSeat(this)"></div>
+        <div class="seat" onclick="selectSeat(this)"></div>
+        <div class="seat" onclick="selectSeat(this)"></div>
+        <div class="seat" onclick="selectSeat(this)"></div>
+        <div class="seat" onclick="selectSeat(this)"></div>
+        <div class="seat" onclick="selectSeat(this)"></div>
+        <div class="seat" onclick="selectSeat(this)"></div>
+      </div>
+      <div class="row">
+        <div class="seat" onclick="selectSeat(this)"></div>
+        <div class="seat" onclick="selectSeat(this)"></div>
+        <div class="seat" onclick="selectSeat(this)"></div>
+        <div class="seat" onclick="selectSeat(this)"></div>
+        <div class="seat" onclick="selectSeat(this)"></div>
+        <div class="seat" onclick="selectSeat(this)"></div>
+        <div class="seat" onclick="selectSeat(this)"></div>
+        <div class="seat" onclick="selectSeat(this)"></div>
+      </div>
+      <div class="row">
+        <div class="seat" onclick="selectSeat(this)"></div>
+        <div class="seat" onclick="selectSeat(this)"></div>
+        <div class="seat" onclick="selectSeat(this)"></div>
+        <div class="seat" onclick="selectSeat(this)"></div>
+        <div class="seat" onclick="selectSeat(this)"></div>
+        <div class="seat" onclick="selectSeat(this)"></div>
+        <div class="seat" onclick="selectSeat(this)"></div>
+        <div class="seat" onclick="selectSeat(this)"></div>
+      </div>
+    </div>
+
+    <p class="text">
+      You have selected <span id="count">0</span> seat(s) for a price of ₹<span id="total">0</span>
+    </p>
+
+    <button id="book" onclick="bookSeats()">Book Now</button>
+  </div>
+
+  <script src="MovieBooking.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Movie Booking.css">
+    <script src="Movie Booking.js"></script>
+</head>
+<body>
+    <div>
+        <h3 style="text-align: center;">MOVIE NAME</h3>
+    <table cellpadding="5" border="0">
+        <tr>
+            <td style="text-align: center;"><button id="btn" onclick="add()">A1</button></td>
+            <td style="text-align: center;"><button id="btn" onclick="add()">A2</button></td>
+            <td style="text-align: center;"><button id="btn" onclick="add()">A3</button></td>
+            <td style="text-align: center;"><button id="btn" onclick="add()">A4</button></td>
+            <td style="text-align: center;"><button id="btn" onclick="add()">A5</button></td>
+            <td style="text-align: center;"><button id="btn" onclick="add()">A6</button></td>
+            <td style="text-align: center;"><button id="btn" onclick="add()">A7</button></td>
+            <td style="text-align: center;"><button id="btn" onclick="add()">A8</button></td>
+        </tr>
+        <tr>
+            <td style="text-align: center;"><button>C1</button></td>
+            <td style="text-align: center;"><button>B1</button></td>
+            <td style="text-align: center;"><button>B2</button></td>
+            <td style="text-align: center;"><button>B3</button></td>
+            <td style="text-align: center;"><button>B4</button></td>
+            <td style="text-align: center;"><button>B5</button></td>
+            <td style="text-align: center;"><button>B6</button></td>
+            <td style="text-align: center;"><button>C13</button></td>
+        </tr>
+        <tr>
+            <td style="text-align: center;"><button>C2</button></td>
+            <td style="text-align: center;"><button>B7</button></td>
+            <td style="text-align: center;"><button>B8</button></td>
+            <td style="text-align: center;"><button>B9</button></td>
+            <td style="text-align: center;"><button>B10</button></td>
+            <td style="text-align: center;"><button>B11</button></td>
+            <td style="text-align: center;"><button>B12</button></td>
+            <td style="text-align: center;"><button>C13</button></td>
+        </tr>
+        <tr>
+            <td style="text-align: center;"><button>C3</button></td>
+            <td style="text-align: center;"><button>B13</button></td>
+            <td style="text-align: center;"><button>B14</button></td>
+            <td style="text-align: center;"><button>B15</button></td>
+            <td style="text-align: center;"><button>B16</button></td>
+            <td style="text-align: center;"><button>B17</button></td>
+            <td style="text-align: center;"><button>B18</button></td>
+            <td style="text-align: center;"><button>C12</button></td>
+        </tr>
+        <tr> 
+            <td style="text-align: center;"><button>C4</button></td>
+            <td style="text-align: center;"><button>B19</button></td>
+            <td style="text-align: center;"><button>B20</button></td>
+            <td style="text-align: center;"><button>B21</button></td>
+            <td style="text-align: center;"><button>B22</button></td>
+            <td style="text-align: center;"><button>B23</button></td>
+            <td style="text-align: center;"><button>B24</button></td>
+            <td style="text-align: center;"><button>C11</button></td>
+        </tr> 
+        <tr>
+            <td style="text-align: center;"><button>C5</button></td>
+            <td style="text-align: center;"><button>C6</button></td>
+            <td style="text-align: center;"><button>C7</button></td>
+            <td style="text-align: center;"><button>C8</button></td>
+            <td style="text-align: center;"><button>C9</button></td>
+            <td style="text-align: center;"><button>C10</button></td>
+            <td style="text-align: center;"><button>C11</button></td>
+            <td style="text-align: center;"><button>C12</button></td>
+        </tr>
+    </table>
+    </div>
+    <script src="Movie Booking.js"></script>
+</body>
+</html> -->
+
+
+

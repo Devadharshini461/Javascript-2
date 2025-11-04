@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="VM.css">
+</head>
+<body style="background-color:rgb(66, 231, 231);">
+    <h2 style="text-align: center;">VENDING MACHINE</h2>
+    <div class="cat">
+        <div class="c1">
+            <img src="download.jpg" alt="Mad Angeles">
+            <h3>A1:Mad Angeles</h3>
+            <p id="Madanglesstock"></p>
+            <p><b>Price: $20</b></p>
+            <button onclick="additem('Madangles')">ADD</button> 
+            <button onclick="remove('Madangles')">REMOVE</button> 
+        </div>
+        <div class="c1">
+            <img src="Lays.jpg" alt="Lays">
+            <h3>A2:Lays</h3>
+            <p id="Laysstock"></p>
+            <p><b>Price: $50</b></p>
+            <button onclick="additem('Lays')">ADD</button>
+            <button onclick="remove('Lays')">REMOVE</button> 
+        </div>
+        <div class="c1">
+            <img src="milkshake.jpg" alt="Milkshake">
+            <h3>A3:Milkshake</h3>
+            <p id="Milkshakestock"></p>
+            <p id="quantity"></p>
+            <p><b>Price: $20</b></p>
+            <button onclick="additem('Milkshake')">ADD</button>
+            <button onclick="remove('Milkshake')">REMOVE</button> 
+        </div>
+        <div class="c1">
+            <img src="brownie.jpg" alt="Brownie">
+            <h3>A4:Brownie</h3>
+            <p id="Browniestock"></p>
+            <p><b>Price: $40</b></p>
+            <button onclick="additem('Brownie')" >ADD</button>
+            <button onclick="remove('Brownie')">REMOVE</button> 
+        </div>
+        
+    </div>
+    <div class="cat1">
+          <div class="c1">
+            <img src="kurkure.jpg" alt="Kurkure">
+            <h3>B1:Kurkure</h3>
+            <p id="Kurkurestock"></p>
+            <p><b>Price: $20</b></p>
+            <button onclick="additem('Kurkure')">ADD</button>
+            <button onclick="remove('Kurkure')">REMOVE</button> 
+        </div>
+        <div class="c1">
+            <img src="shopping.jpg" alt="Boost">
+            <h3>B2:Boost</h3>
+            <p id="Booststock"></p>
+            <p><b>Price: $20</b></p>
+            <button onclick="additem('Boost')">ADD</button>
+            <button onclick="remove('Boost')">REMOVE</button> 
+        </div>
+        <div class="c1">
+            <img src="horlicks.jpg" alt="Horlicks">
+            <h3>B3:Horlicks</h3>
+            <p id="Horlicksstock"></p>
+            <p><b>Price: $20</b></p>
+            <button onclick="additem('Horlicks')">ADD</button>
+            <button onclick="remove('Horlicks')">REMOVE</button> 
+        </div>
+        <div class="c1">
+            <img src="paper bolt.jpg" alt="Paper Bolt">
+            <h3>B4:Paper Bolt</h3>
+            <p id="Paperboltstock"></p>
+            <p><b>Price: $40</b></p>
+            <button onclick="additem('Paperbolt')">ADD</button>
+            <button onclick="remove('Paperbolt')">REMOVE</button>
+        </div>
+    </div>
+    <div class="cat3">
+         <div class="c1">
+            <img src="sprite.jpg" alt="Sprite">
+            <h3>C1:Sprite</h3>
+            <p id="Spritestock"></p>
+            <p><b>Price: $40</b></p>
+            <button onclick="additem('Sprite')">ADD</button>
+            <button onclick="remove('Sprite')">REMOVE</button>
+        </div>
+        <div class="c1">
+            <img src="cococola.jpg" alt="Cococola">
+            <h3>C2:Coco Cola</h3>
+            <p id="Cococolastock"></p>
+            <p><b>Price: $40</b></p>
+            <button onclick="additem('Cococola')">ADD</button>
+            <button onclick="remove('Cococola')">REMOVE</button>
+        </div>
+        <div class="c1">
+            <img src="bingo1.jpg" alt="Bingo">
+            <h3>C3:Bingo</h3>
+            <p id="Bingostock"></p>
+            <p><b>Price: $20</b></p>
+            <button onclick="additem('Bingo')">ADD</button>
+            <button onclick="remove('Bingo')">REMOVE</button>
+        </div>
+        <div class="c1">
+            <img src="moong dal.jpg" alt="Moongdal">
+            <h3>C4:Moong Dal</h3>
+            <p id="Moongdalstock"></p>
+            <p><b>Price: $20</b></p>
+            <button onclick="additem('Moongdal')">ADD</button>
+            <button onclick="remove('Moongdal')">REMOVE</button>
+        </div>
+    </div>
+    <div class="cat2">
+    <div id="bill1">
+            <p id="billp"></p>
+            <p id="billp1"></p>
+            <button onclick="totalvalue(prd)" id="bill">SHOW BILL</button>
+            <br><br>
+            <label>Discount Code:</label>
+            <input type="text" id="discount" ><br><br>
+            <button onclick="discount()">Apply Discount</button><br>
+            <p id="dis"></p>
+            <select id="payment">
+              <option value="">--Select Payment Mode--</option>
+              <option value="GPay">GPay</option>
+              <option value="Card">Card</option>
+              <option value="Cash">Cash</option>
+            </select>
+            
+            <br><br>
+            <button onclick="paymentMode()">PAY</button>
+    </div>
+</div>
+<script src="Vendingmachine.js"></script>
+</body>
+</html>

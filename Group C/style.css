@@ -5,18 +5,44 @@
     width: fit-content;
     height:fit-content;
     padding:25px;
+    border-radius:8px;
+    background-color: rgba(180, 153, 202, 0.295);
 }
 
 button{
     margin-left:40px;
-    margin-top:18px;
+    margin-top:23px;
     padding:4px;
+    background-color: rgba(163, 161, 161, 0.411);
+    border-radius:4px;
 }
-  /* .container {
-      background-color: #fff;
-      width: 350px;
-      margin: auto;
-      padding: 25px;
-      border-radius: 15px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    } */
+
+.box{
+     background-color: rgb(215, 200, 248);
+    width:300px;
+    height:400px;
+    text-align: center;
+    margin-left: 550px;
+    margin-top: 200px;
+    padding:20px;
+    border-radius: 10px;
+}
+body{
+    background-image: url("sunset-4086848_640.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.input{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.button{
+   margin-top: 30px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(9, 10, 10);
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;}
