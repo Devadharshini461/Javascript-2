@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="AC.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Age & Temperature Calculator</h1>
+
+    
+    <div class="card">
+      <h2>Age Calculator</h2>
+
+      <label for="dob">Enter Date of Birth:</label>
+      <input type="date" id="dob">
+      <button onclick="calcAgeNow()">Calculate Age</button>
+      <p id="ageResult"></p>
+      <hr>
+
+      <label for="manualDate">Enter Date to Compare:</label>
+      <input type="date" id="manualDate">
+      <button onclick="calcAgeManual()">Calculate Age</button> 
+
+      <p id="ageResult1"></p>
+    </div>
+
+    <div class="card">
+      <h2>Temperature Converter</h2>
+
+      <label for="tempValue">Enter Temperature:</label>
+      <input type="number" id="tempValue" placeholder="Enter value">
+
+      <div class="dropdowns">
+        <!-- <p>From:</p> -->
+        <select id="fromUnit">
+          <option value="C">Celsius</option>
+          <option value="F">Fahrenheit</option>
+          <option value="K">Kelvin</option>
+        </select><br>
+    <!-- </div>
+     <div class="dropdowns"> -->
+        <p>To</p>
+        <br>
+        <select id="toUnit">
+          <option value="C">Celsius</option>
+          <option value="F">Fahrenheit</option>
+          <option value="K">Kelvin</option>
+        </select>
+      </div>
+      <button onclick="convertTemp()">Convert</button>
+      <p id="tempResult"></p>
+    </div>
+  </div>
+
+  <script src="AC.js"></script>
+</body>
+</html>
